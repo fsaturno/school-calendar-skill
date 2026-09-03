@@ -56,9 +56,9 @@ To set this up:
 3. Open a new chat inside that project and type `>setup`.
 
 Everything the skill creates (your school configs, the `.ics` files, the
-WhatsApp messages) will then live inside that linked folder, so it stays
-with the project across sessions instead of depending on Cowork's own
-temporary storage.
+WhatsApp messages to share with other parents) will then live inside that
+linked folder, so it stays with the project across sessions instead of
+depending on Cowork's own temporary storage.
 
 **🔵 ADVANCED - for Claude Code, if you want it fully hands-off.**
 Runs on your own computer via Claude Code (not Cowork) and sets up a real
