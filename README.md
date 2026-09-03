@@ -13,15 +13,15 @@ is what lets it work on a school nobody's tested it against.
 
 ## Installing
 
-**If you were sent a `.skill` file** (e.g. over WhatsApp): open it in
-Claude Code or Cowork and use the "Save skill" option to install it into
-your profile.
+Download `school-calendar.skill` from the
+[latest release](https://github.com/fsaturno/school-calendar-skill/releases/latest),
+then open it in Claude Code or Cowork and use the "Save skill" option to
+install it into your profile.
 
-**If you have this folder directly**: copy the whole `school-calendar/`
-folder into your Claude Code skills directory (typically `~/.claude/skills/`),
-keeping the folder name and internal structure exactly as-is.
+(If someone sent you the `.skill` file directly instead, e.g. over
+WhatsApp, do the same thing - open it and "Save skill".)
 
-Either way, once installed, just run:
+Once installed, just run:
 
 ```
 /school-calendar
@@ -49,8 +49,9 @@ and follow the prompts - it takes about 2 minutes for a first calendar.
   - **Self-hosting (school admins/head teachers).** If you're publishing on
     behalf of the whole school and the school already has a website,
     hosting the `.ics` file there directly is often simpler than Google
-    Drive and looks more official to parents. See
-    [`references/self_hosted_setup.md`](references/self_hosted_setup.md).
+    Drive and looks more official to parents. Once installed, the skill
+    walks you through this itself (`references/self_hosted_setup.md`
+    ships inside the `.skill` file).
 
 Note that a skill can't connect a new Google Drive/email account to Claude
 on its own - that's an account-level setting you turn on in Claude Code's
@@ -96,11 +97,11 @@ never silently overwrite your correction.
 
 If another parent wants to run this for their own school (rather than just
 subscribing to a calendar you've already made - see the WhatsApp message
-the skill generates for that), the easiest way to hand them the skill
-itself is to package it as a `.skill` file and send that directly over
-WhatsApp or any messaging app - no Google Drive sharing permissions to sort
-out, the file is tiny. They'll still need Claude Code or Cowork installed
-first; getting the file to them is the easy part.
+the skill generates for that), just send them the link to this repo, or
+the `.skill` file directly over WhatsApp/email if that's easier - no
+Google Drive sharing permissions to sort out, the file is tiny. They'll
+still need Claude Code or Cowork installed first; getting the file to them
+is the easy part.
 
 ## License
 
