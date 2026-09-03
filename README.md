@@ -45,10 +45,20 @@ No coding background needed. You check for date changes yourself, whenever
 you want (e.g. once a term), just by asking - the skill walks you through
 everything else, including publishing/sharing the calendar. There's no
 automatic background checking on this path, so nothing runs unless you ask
-it to. **You'll need to create the Cowork project yourself first** (via
-Cowork's own "New Project") and install this skill inside it - the skill
-can walk you through setup once you're in there, but it can't create the
-Cowork project for you.
+it to.
+
+To set this up:
+1. In Cowork, create a new project - call it something like "School
+   Calendars".
+2. Link that project to a folder on your computer where you'd like the
+   generated calendar files saved. (The skill can't create this project or
+   link for you - that's a Cowork step you do once, yourself.)
+3. Open a new chat inside that project and type `>setup`.
+
+Everything the skill creates (your school configs, the `.ics` files, the
+WhatsApp messages) will then live inside that linked folder, so it stays
+with the project across sessions instead of depending on Cowork's own
+temporary storage.
 
 **🔵 ADVANCED - for Claude Code, if you want it fully hands-off.**
 Runs on your own computer via Claude Code (not Cowork) and sets up a real
