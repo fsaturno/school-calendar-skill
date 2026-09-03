@@ -11,6 +11,11 @@ feed - and it's built so that Claude reads the messy real-world page itself
 rather than relying on a rigid parser tuned to one school's website, which
 is what lets it work on a school nobody's tested it against.
 
+> This skill makes a good-faith effort to keep calendars accurate, based on
+> the dates published on each school's official website - but it's
+> provided as a convenience, not a guarantee. Always verify important
+> dates independently with the school directly.
+
 ## Installing
 
 Download `school-calendar.skill` from the
@@ -29,10 +34,34 @@ Once installed, just run:
 
 and follow the prompts - it takes about 2 minutes for a first calendar.
 
+## Choose how you'll run it: EASY or ADVANCED
+
+Before anything else, decide how automated you want date-checking to be -
+the skill asks you this same question the first time you run it, but it's
+worth knowing up front:
+
+**🟢 EASY - recommended for most people, especially in Cowork.**
+No coding background needed. You check for date changes yourself, whenever
+you want (e.g. once a term), just by asking - the skill walks you through
+everything else, including publishing/sharing the calendar. There's no
+automatic background checking on this path, so nothing runs unless you ask
+it to.
+
+**🔵 ADVANCED - for Claude Code, if you want it fully hands-off.**
+Runs on your own computer via Claude Code (not Cowork) and sets up a real
+scheduled check - termly or monthly - that runs automatically in the
+background, even when you're not using Claude, so you never have to
+remember to check yourself. This needs Claude Code installed locally
+rather than Cowork, and a bit more comfort with your computer generally
+(the skill still walks you through the setup itself).
+
+Not sure which? Start with EASY. You can always move to ADVANCED later by
+running the skill from Claude Code instead of Cowork.
+
 ## What you'll need
 
 - **Claude Code or Cowork**, with this skill installed (see "Installing"
-  above).
+  above) - whichever matches the EASY/ADVANCED choice above.
 - **A URL**: either the school's specific term-dates page, or just the
   homepage (the skill will look for the right link itself).
 - **Python 3.** The skill checks for a few small helper libraries on first
@@ -60,11 +89,10 @@ everything above still works manually.
 
 **Model recommendation:** Sonnet at high/extra reasoning is sufficient for
 normal use, and is what this skill was built and validated against
-end-to-end. If you set up automatic scheduled refresh checks, consider
-Opus at high reasoning specifically for those - they run unattended and
-un-reviewed, so the extra reasoning budget is worth it there even though
-it's not needed for everyday use. This is a recommendation, not a
-requirement.
+end-to-end. On the ADVANCED path, consider Opus at high reasoning
+specifically for the scheduled runs - they run unattended and un-reviewed,
+so the extra reasoning budget is worth it there even though it's not
+needed for everyday use. This is a recommendation, not a requirement.
 
 ## Adding your own events (bake sales, PTA meetings, etc.)
 
