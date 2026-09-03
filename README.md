@@ -45,7 +45,10 @@ No coding background needed. You check for date changes yourself, whenever
 you want (e.g. once a term), just by asking - the skill walks you through
 everything else, including publishing/sharing the calendar. There's no
 automatic background checking on this path, so nothing runs unless you ask
-it to.
+it to. **You'll need to create the Cowork project yourself first** (via
+Cowork's own "New Project") and install this skill inside it - the skill
+can walk you through setup once you're in there, but it can't create the
+Cowork project for you.
 
 **🔵 ADVANCED - for Claude Code, if you want it fully hands-off.**
 Runs on your own computer via Claude Code (not Cowork) and sets up a real
@@ -93,6 +96,28 @@ end-to-end. On the ADVANCED path, consider Opus at high reasoning
 specifically for the scheduled runs - they run unattended and un-reviewed,
 so the extra reasoning budget is worth it there even though it's not
 needed for everyday use. This is a recommendation, not a requirement.
+
+## Commands
+
+Type `>help` any time to see this list again. Most take a `[school]` name
+if you have more than one configured - the skill will ask if it's not
+clear which one you mean.
+
+| Command | What it does |
+|---|---|
+| `>help` | Show this list of commands. |
+| `>setup` | First-run setup (EASY vs ADVANCED) - only appears if nothing's configured yet. |
+| `>add` | Add another school. |
+| `>refresh [school]` | Check the school's website again for date changes, and offer to update the calendar. |
+| `>add-event [school]` | Add your own events (bake sales, PTA meetings, etc.) - see below. |
+| `>remove-event [school]` | Remove or hide an event. |
+| `>remove [school]` | Delete a school and its calendar from this skill entirely. |
+| `>verify [school]` | Quick check that the shared calendar link still works, without re-checking the school's website. |
+| `>refresh-schedule [termly\|monthly\|cancel] [school]` | Turn automatic checking on, change it, or turn it off (ADVANCED/Claude Code only). |
+| `>show-schedule` | See what's currently set to check automatically. |
+| `>status` | See all your schools, when each was last checked, and whether the last automatic check notified you. |
+| `>instructions [school]` | Regenerate the WhatsApp message and import instructions to share with parents. |
+| `>unschedule [school]` | Same as `>refresh-schedule cancel`. |
 
 ## Adding your own events (bake sales, PTA meetings, etc.)
 
